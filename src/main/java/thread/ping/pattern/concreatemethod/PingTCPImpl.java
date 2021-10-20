@@ -17,6 +17,16 @@ import java.util.logging.Logger;
 
 public class PingTCPImpl extends BaseMethod implements CommandMethods {
 
+/*    BaseMethod baseMethod;
+
+    public BaseMethod getBaseMethod() {
+        return baseMethod;
+    }
+
+    public void setBaseMethod(BaseMethod baseMethod) {
+        this.baseMethod = baseMethod;
+    }*/
+
     private Properties properties = new Properties();
     String host;
 

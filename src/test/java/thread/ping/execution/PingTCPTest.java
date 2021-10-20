@@ -5,26 +5,33 @@ import org.junit.Test;
 import org.mockito.Mockito;
 import thread.ping.pattern.BaseMethod;
 import thread.ping.pattern.concreatemethod.PingTCPImpl;
-import thread.ping.pattern.concreatemethod.RouterImpl;
 
-import java.util.HashMap;
-import java.util.Map;
 
 import static org.mockito.Mockito.*;
 
 public class PingTCPTest {
 
+    private PingTCPImpl myObj;
     BaseMethod mock;
 
     @Before
-    public void setUp() {
+    public void setUp() throws Exception {
         mock = mock(BaseMethod.class);
-
+        myObj= spy(new PingTCPImpl("oranum.com"));
     }
 
     @Test
+    public void callReportIfStatusCodeNot200(){
+        String response = "302:781";
+        doNothing().when((BaseMethod )myObj).
+                responseReportHandler(response);
+
+    }
+
+
+    @Test
     public void pingTCPTest() throws Exception {
-        PingTCPImpl spy = Mockito.spy(new PingTCPImpl("google.com"));
+        PingTCPImpl spy = Mockito.spy(new PingTCPImpl("oranum.com"));
         spy.runCommand();
     }
 
@@ -37,16 +44,5 @@ public class PingTCPTest {
         verify(spy).report("google.com");
     }
 
-    @Test
-    public void callReportIfStatusCodeNot200() throws Exception {
 
-        PingTCPImpl spy = Mockito.spy(new PingTCPImpl("google.com"));
-        String response = "302:781";
-        doNothing().when(spy).report("google.com");
-        spy.report("hh");
-        verify(spy).responseReportHandler(response);
-
-
-
-    }
 }
