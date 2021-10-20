@@ -9,7 +9,8 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- * Implementation of ICMP ping command
+  * Implementation of ICMP ping command
+ * @author Pedram Karevan
  */
 public class PingICMPImpl extends BaseMethod implements CommandMethods {
 

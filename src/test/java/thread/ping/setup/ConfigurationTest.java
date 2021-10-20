@@ -22,7 +22,7 @@ public class ConfigurationTest {
         Map<String, Object> params = new HashMap<>();
         params.put("ping.icmp.delay" ,7000);
         params.put("ping.http.max.response.time" ,7000);
-        params.put("report.url" ,"https://api.kara-pay.ir/ipg-test/api/transaction");
+        params.put("report.url" ,"https://api./test/api/transaction");
         params.put("log.file" ,"log.txt");
         params.put("hosts", "google.com");
         params.put("log.level" ,"warning");

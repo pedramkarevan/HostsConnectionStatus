@@ -29,6 +29,7 @@ public class BaseMethod extends AssistImpl {
 
     /**
      * For Ping Execution
+     *
      */
 
     public BufferedReader instructionBuilder() throws Exception {

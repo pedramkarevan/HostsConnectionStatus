@@ -8,6 +8,7 @@ import java.util.logging.Logger;
 
 /**
  * Implementation of tracert command
+ * @author Pedram Karevan
  */
 public class RouterImpl extends BaseMethod implements CommandMethods {
     public Logger logger =Logger.getLogger(RouterImpl.class.getName());

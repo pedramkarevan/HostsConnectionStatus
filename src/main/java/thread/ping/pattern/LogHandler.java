@@ -5,6 +5,7 @@ import java.util.logging.FileHandler;
 /**
  * Singleton pattern for initialization of FileHandler with  a file property
  * during the process we have an access to a file for writing reports
+ * @author Pedram Karevan
  *
  * */
 public class LogHandler extends BaseMethod{

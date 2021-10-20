@@ -6,7 +6,6 @@ import thread.ping.pattern.concreatemethod.PingICMPImpl;
 import thread.ping.pattern.creator.CommandRunner;
 import thread.ping.pattern.methodinterface.CommandMethods;
 
-import java.util.Properties;
 import java.util.logging.Logger;
 
 
